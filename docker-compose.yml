@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: resume-ai-backend-container
+    # Pass environment variables from your local .env file.
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: resume-ai-frontend-container
+    ports:
+      # Map local port 5173 to the container's port 80.
+      - "5173:80"
+    # Ensure the backend starts before the frontend.
+    depends_on:
+      - backend

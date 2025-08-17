@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://127.0.0.1:8000', // Your FastAPI server URL
+  // When running in Docker, the frontend will connect to the backend
+  // using the service name 'backend' as the hostname.
+   baseURL: 'http://localhost:8000', // <-- CHANGE THIS BACK
 });
 
 // This automatically adds the authentication token to every request
