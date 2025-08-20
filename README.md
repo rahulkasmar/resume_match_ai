@@ -1,6 +1,6 @@
 <div align="center">
 
-AI Resume Analyzer & Job Match Assistant
+AI Resume Analyzer & Job Match Assistant\
 An intelligent, full-stack application that leverages AI to score resumes against job descriptions, provide actionable feedback, and generate tailored cover letters.
 
 </div>
